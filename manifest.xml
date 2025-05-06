@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:type="TaskPaneApp">
+
+  <!-- Unique ID for the add-in -->
+  <Id>8c64c3aa-d9e2-472c-8996-lawreviewformatter</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Your Law Review</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+
+  <DisplayName DefaultValue="Law Review Formatter"/>
+  <Description DefaultValue="Apply MSLR-compliant formatting to existing Word articles."/>
+
+  <IconUrl DefaultValue="https://via.placeholder.com/64"/>
+  <SupportUrl DefaultValue="https://yourdomain.com/support"/>
+
+  <Hosts>
+    <Host Name="Document"/>
+  </Hosts>
+
+  <DefaultSettings>
+    <!-- Adjust localhost port if needed -->
+    <SourceLocation DefaultValue="https://Alonso-droid.github.io/law-review-word-addin/taskpane.html"/>
+  </DefaultSettings>
+
+  <Permissions>ReadWriteDocument</Permissions>
+
+  <Requirements>
+    <Sets DefaultMinVersion="1.1">
+      <Set Name="WordApi"/>
+    </Sets>
+  </Requirements>
+</OfficeApp>
