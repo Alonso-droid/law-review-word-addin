@@ -4,51 +4,34 @@
   <meta charset="utf-8" />
   <title>Law Review Formatter</title>
   <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
-  <style>
-    body { font-family: sans-serif; margin: 1rem; }
-    input, textarea, select {
-      display: block;
-      width: 100%;
-      margin-bottom: 1rem;
-      padding: 0.5rem;
-      font-size: 14px;
-    }
-    button {
-      padding: 0.6rem 1rem;
-      font-size: 16px;
-      background-color: #2e8b57;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #256b45;
-    }
-    h1 { font-size: 18px; color: #2e8b57; margin-bottom: 1rem; }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h1>Law Review Formatter</h1>
 
-  <label>Article Title</label>
+  <label for="title">Article Title</label>
   <input type="text" id="title" placeholder="Enter article title">
 
-  <label>Author Name</label>
+  <label for="author">Author Name</label>
   <input type="text" id="author" placeholder="Enter author name">
 
-  <label>Abstract</label>
-  <textarea id="abstract" rows="4" placeholder="Paste abstract text here"></textarea>
+  <label for="abstract">Abstract</label>
+  <textarea id="abstract" placeholder="Paste abstract text here"></textarea>
 
-  <label>Author Footnote</label>
-  <textarea id="footnote" rows="3" placeholder="Affiliation or author’s note"></textarea>
+  <label for="footnote">Author Footnote</label>
+  <textarea id="footnote" placeholder="Author affiliation or note"></textarea>
 
-  <label>Footnote Symbol</label>
+  <label for="symbol">Footnote Symbol</label>
   <select id="symbol">
     <option value="*">Asterisk (*)</option>
     <option value="†">Dagger (†)</option>
   </select>
 
   <button onclick="formatDocument()">Format This Document</button>
+
+  <footer>
+    MSLR Add-in by Your Law Review &mdash; Last updated 2025
+  </footer>
 
   <script src="taskpane.js"></script>
 </body>
